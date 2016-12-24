@@ -1,131 +1,68 @@
 <style>
-/*背景样式*/
+/*————————— 背景设置require ———————————*/
+body {
+  margin: 0;
+  font:normal 75% Arial, Helvetica, sans-serif;
+}
+
 canvas {
   display: block;
   vertical-align: bottom;
 }
-#particles-js {
-  position: absolute;
-  height: 100%;
-  width:100%;
-  background-image: linear-gradient(-134deg,#04272e 0,#37607e 98%);
-  /*background-repeat: no-repeat;*/
-}
-
-
-
-/*登录框样式*/
-.page-login {
-  position: absolute;
-  top: 30%;
-  height: 70%;
-} 
-
-/*页尾样式*/
-.footer{
-  position: absolute;
-  top: 90%;
-}
-
-
-#title, #description{
-  font:  'Microsoft YaHei',arial,tahoma,sans-serif;
-  color: #fff;
-}
-
-
-/*设置链接统一格式*/
-a,a:focus,a:hover,a:visited{
-  text-decoration: none;
-}
-
-
-
-
-.login_account{
-  color: #fff;
-  font-size: 0.5em;
-}
-
-
-#copyright a{
-  color: #BBBBBB;
-  font-size: 0.5em;
-}
-
-
-
-
-/*  ————————————————— 调整框架位置 ———————————————————   */
-/*居中*/
-.test-center,header,#login_form,footer{
-  position: absolute;
-  left: 0;  
-  right: 0; 
-  bottom: 0;
-  margin: auto;
-  width: 300px;
-}
-/*位置*/
-header{
-  top: 30%;
-}
-
-#login_form{
-  top: 50%;
-}
-
-footer{
-  top: 90%;
-}
-
 </style>
-
-
 
 <!-- 科技-点与线 背景 -->
 <div id="particles-js" class="container-fluid">
 
 
-  <!-- 页头 -->
-  <header>
-    <!-- Logo或标题  -->
-    <div class="text-center">
-      <!-- 标题 -->
-      <h1 id="title">牧云</h1>
-      <br>
-      <!-- 描述 -->
-      <p id="description">一个统一管理分布在各服务商云资源的中控台</p> 
-      <br> 
-    </div>        
-  </header>
-  <!--  -->
+
+  <!-- 导航条 -->
+  <nav>
+    <a href="">文档</a> | <a href="">联系我们</a>
+  </nav>
 
 
+  <!-- 核心内容   -->
+  <article>
+    <!-- 页头 -->
+    <header>
+      <!-- Logo或标题  -->
+      <div class="text-center">
+        <!-- 标题 -->
+        <h1 id="title">牧云</h1>
+        <!-- <br> -->
+        <!-- 描述 -->
+        <h2 id="description">专用于集中管理分散云资源的中控台</h2> 
+        <br> 
+      </div>        
+    </header>
+    <!--  -->
 
-  <!-- 登录表单 -->
-  <form role="form" id="login_form" class="row">
-    <div class="form-group">
-      <input type="email" class="form-control" id="exampleInputEmail1" placeholder="Enter email">
-    </div>
-    <div class="form-group ">
-      <div class="input-group">
-        <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
-        <span class="input-group-btn">
-          <button class="btn btn-default" type="button">
-            <i class="fa fa-sign-in" aria-hidden="true"></i>
-          </button>
-        </span>
+    <!-- 登录表单 -->
+    <form role="form" class="row">
+      <div class="form-group">
+        <input type="email" class="form-control" id="exampleInputEmail1" placeholder="Enter email">
       </div>
-    </div>
-    <div class="col-md-12"><br></div>
-    <div class="col-md-4 text-left">
-      <a href="" class="login_account">+ 注册账号</a>  
-    </div>
-    <div class="col-md-4 col-md-offset-4 text-right">
-      <a href="" class="login_account">忘记密码 ?</a>  
-    </div>
-  </form>
+      <div class="form-group ">
+        <div class="input-group">
+          <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
+          <span class="input-group-btn">
+            <button class="btn btn-default" type="button">
+              <i class="fa fa-sign-in" aria-hidden="true"></i>
+            </button>
+          </span>
+        </div>
+      </div>
+      <div class="col-md-12"><br></div>
+      <div class="col-md-6 col-sm-6 col-xs-6 text-left">
+        <a href="" class="login_account">+ 注册账号</a>  
+      </div>
+      <div class="col-md-6 col-sm-6 col-xs-6 pull-right text-right">
+        <a href="" class="login_account">忘记密码 ?</a>  
+      </div>
+    </form>
+    <!--  -->
+  </article>
   <!--  -->
 
 
@@ -134,8 +71,6 @@ footer{
     <a href="https://github.com/liangchaob">© 2016 liangchaob</a>
   </footer>
   <!--  -->
-
-
 
 </div>
 <!--  -->
@@ -262,8 +197,4 @@ particlesJS("particles-js", {
   },
   "retina_detect": true
 });
-
-
-// 视觉差效果
-
 </script>
