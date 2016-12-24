@@ -1,0 +1,309 @@
+<script src="http://odor1hjie.bkt.clouddn.com/particles.js"></script>
+<style>
+/*————————— 背景设置require ———————————*/
+body {
+  margin: 0;
+  font:normal 75% Arial, Helvetica, sans-serif;
+}
+
+canvas {
+  display: block;
+  vertical-align: bottom;
+}
+
+/* ---- particles.js 背景 ---- */
+
+/*背景样式*/
+#particles-js {
+  position: absolute;
+  height: 100%;
+  width:100%;
+  background-image: linear-gradient(-134deg,#04272e 0,#37607e 98%);
+  background-image: linear-gradient(-134deg,#04272e 0,#37607e 98%);
+  /*background-repeat: no-repeat;*/
+}
+
+
+/*  ————————————————— 调整框架位置 ———————————————————   */
+/*居中*/
+article,footer{
+  position: absolute;
+  left: 0;  
+  right: 0; 
+  bottom: 0;
+  margin: auto;
+  width: 280px;
+}
+
+
+nav{
+  position: absolute;
+  right: 10%;
+  top: 3%;
+}
+
+
+
+article{
+  top: 30%;
+}
+
+footer{
+  top: 90%;
+}
+
+
+
+
+/*————————————————————— 字体 ————————————————————————*/
+#title, #description{
+  font:  'Microsoft YaHei',arial,tahoma,sans-serif;
+  color: #fff;
+}
+
+#description{
+  font-size: 1em;
+}
+
+
+
+
+a.login_account,a.login_account:focus,a.login_account:hover{
+  text-decoration: none;
+  color: #fff;
+  font-size: 1em;
+}
+
+
+
+footer a ,footer a:focus,footer a:hover,footer a:visited{
+  text-decoration: none;
+  color: #BBBBBB;
+  font-size: 1em;
+}
+
+nav{
+  color: #BBBBBB;
+}
+
+nav a ,nav a:visited{
+  text-decoration: none;
+  color: #888888;
+  font-size: 0.8em;
+}
+
+nav a:focus,nav a:hover{
+  text-decoration: none;
+  color: #19a0df;
+  font-size: 0.8em;
+}
+
+
+
+
+</style>
+
+<!-- 科技-点与线 背景 -->
+<div id="particles-js" class="container-fluid">
+
+
+
+  <!-- 导航条 -->
+  <nav>
+    <a href="">文档</a> | <a href="">联系我们</a>
+  </nav>
+
+
+  <!-- 核心内容   -->
+  <article>
+    <!-- 页头 -->
+    <header>
+      <!-- Logo或标题  -->
+      <div class="text-center">
+        <!-- 标题 -->
+        <h1 id="title">牧云</h1>
+        <!-- <br> -->
+        <!-- 描述 -->
+        <h2 id="description">专用于集中管理分散云资源的中控台</h2> 
+        <br> 
+      </div>        
+    </header>
+    <!--  -->
+
+    <!-- 登录表单 -->
+    <%= simple_form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
+      <!-- 输入邮箱 -->
+      <div class="form-group">
+        <%= f.input :email, label: false, required: false,placeholder: '输入邮箱', autofocus: true %>
+      </div>
+      <!-- 输入密码 -->
+      <div class="form-group ">
+        <div class="input-group">
+          <%= f.input :password, label: false, placeholder: '输入密码',required: false %>
+          <span class="input-group-btn">
+          <button type="submit" name="commit" value="Log in" class="btn btn-default" data-disable-with="登录中...">
+            <i class="fa fa-sign-in" aria-hidden="true"></i>
+          </button>
+        </span>
+      </div>
+      <div class="row">
+        <div class="col-md-12"><br></div>
+        <div class="col-md-6 col-sm-6 col-xs-6 text-left">
+          <a href="<%= new_registration_path(resource_name) %>" class="login_account">+ 注册账号</a>  
+        </div>
+        <div class="col-md-6 col-sm-6 col-xs-6 pull-right text-right">
+          <a href="<%= new_password_path(resource_name) %>" class="login_account">忘记密码 ?</a>  
+        </div>        
+      </div>
+    <% end %>
+    <!--  -->
+  </article>
+  <!--  -->
+
+
+  <!-- 页尾 -->
+  <footer class="text-center" id="footer">
+    <a href="https://github.com/liangchaob">© 2016 liangchaob</a>
+  </footer>
+  <!--  -->
+
+</div>
+<!--  -->
+
+
+
+
+
+
+
+
+
+
+
+<script> 
+/* ---- 科技-点与线 config ---- */
+particlesJS("particles-js", {
+  "particles": {
+    "number": {
+      "value": 30,
+      "density": {
+        "enable": true,
+        "value_area": 1000
+      }
+    },
+    "color": {
+      "value": "#ffffff"
+    },
+    "shape": {
+      "type": "circle",
+      "stroke": {
+        "width": 0,
+        "color": "#000000"
+      },
+      "polygon": {
+        "nb_sides": 5
+      },
+      "image": {
+        "src": "img/github.svg",
+        "width": 100,
+        "height": 100
+      }
+    },
+    "opacity": {
+      "value": 0.5,
+      "random": false,
+      "anim": {
+        "enable": false,
+        "speed": 10,
+        "opacity_min": 0.1,
+        "sync": false
+      }
+    },
+    "size": {
+      "value": 1.5,
+      "random": true,
+      "anim": {
+        "enable": false,
+        "speed": 40,
+        "size_min": 0.1,
+        "sync": false
+      }
+    },
+    "line_linked": {
+      "enable": true,
+      "distance": 150,
+      "color": "#ffffff",
+      "opacity": 0.4,
+      "width": 0.3
+    },
+    "move": {
+      "enable": true,
+      "speed": 2,
+      "direction": "none",
+      "random": false,
+      "straight": false,
+      "out_mode": "out",
+      "bounce": false,
+      "attract": {
+        "enable": true,
+        "rotateX": 600,
+        "rotateY": 1200
+      }
+    }
+  },
+  "interactivity": {
+    "detect_on": "canvas",
+    "events": {
+      "onhover": {
+        "enable": false,
+        "mode": "push"
+      },
+      "onclick": {
+        "enable": false,
+        "mode": "push"
+      },
+      "resize": true
+    },
+    "modes": {
+      "grab": {
+        "distance": 140,
+        "line_linked": {
+          "opacity": 1
+        }
+      },
+      "bubble": {
+        "distance": 400,
+        "size": 40,
+        "duration": 2,
+        "opacity": 8,
+        "speed": 3
+      },
+      "repulse": {
+        "distance": 200,
+        "duration": 0.4
+      },
+      "push": {
+        "particles_nb": 4
+      },
+      "remove": {
+        "particles_nb": 2
+      }
+    }
+  },
+  "retina_detect": true
+});
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
