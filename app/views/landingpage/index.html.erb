@@ -1,0 +1,253 @@
+<style>
+/*背景样式*/
+particles-js {
+  position: absolute;
+  height: 100%;
+  width:100%;
+  background-image: linear-gradient(-134deg,#04272e 0,#37607e 98%);
+  /*background-repeat: no-repeat;*/
+}
+
+
+
+/*登录框样式*/
+.page-login {
+  position: absolute;
+  top: 30%;
+  height: 70%;
+} 
+
+
+.footer{
+  position: absolute;
+  top: 90%;
+}
+
+
+#title, #description{
+  font:  'Microsoft YaHei',arial,tahoma,sans-serif;
+  color: #fff;
+}
+
+
+/*设置链接统一格式*/
+a,a:focus,a:hover,a:visited{
+  text-decoration: none;
+}
+
+
+#footer{
+  position: absolute;
+  top: 80%;
+}
+
+
+
+.login_account{
+  color: #fff;
+  font-size: 0.5em;
+}
+
+
+#copyright a{
+  color: #BBBBBB;
+  font-size: 0.5em;
+}
+
+</style>
+
+
+
+<!-- 科技-点与线 背景 -->
+<div id="particles-js" class="container-fluid">
+
+
+  <!-- 登录框 -->
+  <div class="col-md-2 col-md-offset-5 col-sm-6 col-sm-offset-3 col-xs-8 col-xs-offset-2 page-login row">
+
+      <!-- Logo或标题  -->
+      <div class="text-center">
+        <!-- 标题 -->
+        <h1 id="title">牧云</h1>
+        <br>
+        <!-- 描述 -->
+        <p id="description">一个统一管理分布在各服务商云资源的集中控制台</p> 
+        <br> 
+      </div>
+
+      <!-- 登录表单 -->
+      <form role="form">
+        <div class="form-group col-md-12">
+          <input type="email" class="form-control" id="exampleInputEmail1" placeholder="Enter email">
+        </div>
+        <div class="form-group col-md-12 ">
+          <div class="input-group">
+            <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
+            <span class="input-group-btn">
+              <button class="btn btn-default" type="button">
+                <i class="fa fa-sign-in" aria-hidden="true"></i>
+              </button>
+            </span>
+          </div>
+        </div>
+
+        <div class="col-md-12"><br></div>
+
+        <div class="col-md-4 text-left">
+          <a href="" class="login_account">+ 注册账号</a>  
+        </div>
+        <div class="col-md-4 col-md-offset-4 text-right">
+          <a href="" class="login_account">忘记密码 ?</a>  
+        </div>
+      </form>
+
+
+      <!-- 页尾 -->
+      <footer class="row col-md-12" id="footer">
+        <div class="col-md-6 col-md-offset-3 row text-center">
+          <p class="text-center" id="copyright"><a href="https://github.com/liangchaob">© 2016 liangchaob</a></p>
+        </div>  
+      </footer>
+
+
+
+
+      
+  </div>
+  <!--  -->
+
+<!--   <div class="col-md-12">
+    <div>hihi</div>
+  </div> -->
+
+
+</div>
+<!--  -->
+
+
+
+
+
+
+
+
+
+
+
+<script> 
+/* ---- 科技-点与线 config ---- */
+particlesJS("particles-js", {
+  "particles": {
+    "number": {
+      "value": 40,
+      "density": {
+        "enable": true,
+        "value_area": 1000
+      }
+    },
+    "color": {
+      "value": "#ffffff"
+    },
+    "shape": {
+      "type": "circle",
+      "stroke": {
+        "width": 0,
+        "color": "#000000"
+      },
+      "polygon": {
+        "nb_sides": 5
+      },
+      "image": {
+        "src": "img/github.svg",
+        "width": 100,
+        "height": 100
+      }
+    },
+    "opacity": {
+      "value": 0.5,
+      "random": false,
+      "anim": {
+        "enable": false,
+        "speed": 10,
+        "opacity_min": 0.1,
+        "sync": false
+      }
+    },
+    "size": {
+      "value": 1.5,
+      "random": true,
+      "anim": {
+        "enable": false,
+        "speed": 40,
+        "size_min": 0.1,
+        "sync": false
+      }
+    },
+    "line_linked": {
+      "enable": true,
+      "distance": 150,
+      "color": "#ffffff",
+      "opacity": 0.4,
+      "width": 0.3
+    },
+    "move": {
+      "enable": true,
+      "speed": 2,
+      "direction": "none",
+      "random": false,
+      "straight": false,
+      "out_mode": "out",
+      "bounce": false,
+      "attract": {
+        "enable": true,
+        "rotateX": 600,
+        "rotateY": 1200
+      }
+    }
+  },
+  "interactivity": {
+    "detect_on": "canvas",
+    "events": {
+      "onhover": {
+        "enable": false,
+        "mode": "push"
+      },
+      "onclick": {
+        "enable": false,
+        "mode": "push"
+      },
+      "resize": true
+    },
+    "modes": {
+      "grab": {
+        "distance": 140,
+        "line_linked": {
+          "opacity": 1
+        }
+      },
+      "bubble": {
+        "distance": 400,
+        "size": 40,
+        "duration": 2,
+        "opacity": 8,
+        "speed": 3
+      },
+      "repulse": {
+        "distance": 200,
+        "duration": 0.4
+      },
+      "push": {
+        "particles_nb": 4
+      },
+      "remove": {
+        "particles_nb": 2
+      }
+    }
+  },
+  "retina_detect": true
+});
+
+
+// 视觉差效果
+
+</script>
