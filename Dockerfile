@@ -3,13 +3,6 @@ FROM library/rails:5.0.1
 
 MAINTAINER Liangchaob <liangchaob@163.com> 
 
-# Add app stuff into daocloud server
-COPY . /app
-
-
-# Cgdir to app
-WORKDIR /app
-
 # excuse RUN
 RUN gem sources --add https://gems.ruby-china.org/ --remove https://rubygems.org/
 RUN gem install rubygems-bundler
@@ -18,8 +11,20 @@ RUN gem update bundler
 RUN gem install rake
 
 
+# Add app stuff into daocloud server
+COPY . /app
+
+# Cgdir to app
+WORKDIR /app
+
 # Open Ports
 EXPOSE 80
 
+# excuse RUN
+RUN bundle install
+RUN rake db:migrate
+
+
+
 # Start rails server in production model
-CMD bundle install | rake db:migrate | rails s -e production
+CMD rails s -e production
