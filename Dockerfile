@@ -13,8 +13,13 @@ EXPOSE 80
 # Cgdir to app
 WORKDIR /app
 
+# 执行 RUN
+RUN gem install rubygems-bundler
+RUN gem regenerate_binstubs
+RUN bundle install
+RUN rake db:migrate
+RUN rake db:seed
+
 # Start rails server in production model
-CMD bundle install
-CMD rake db:migrate
-CMD rake db:seed
+
 CMD rails s -e production
