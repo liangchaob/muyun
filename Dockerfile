@@ -22,6 +22,4 @@ RUN gem install rake
 EXPOSE 80
 
 # Start rails server in production model
-CMD rake db:migrate
-CMD bundle install
-CMD rails s -e production
+CMD bundle install | rake db:migrate | rails s -e production
