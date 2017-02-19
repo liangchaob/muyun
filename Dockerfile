@@ -14,4 +14,6 @@ EXPOSE 80
 WORKDIR /app
 
 # Start rails server in production model
+CMD rake db:migrate
+CMD rake db:seed
 CMD rails s -e production
