@@ -27,4 +27,4 @@ RUN rake db:migrate
 
 
 # Start rails server in production model
-CMD rails s -e production
+CMD bash
