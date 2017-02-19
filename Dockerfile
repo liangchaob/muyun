@@ -22,9 +22,9 @@ EXPOSE 80
 
 # excuse RUN
 RUN bundle install
-RUN rake db:migrate
-
 
 
 # Start rails server in production model
-CMD rails s -e production -b 0.0.0.0
+CMD rake db:migrate
+
+ENTRYPOINT rails s -e production -b 0.0.0.0
