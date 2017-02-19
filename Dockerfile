@@ -14,6 +14,8 @@ WORKDIR /app
 RUN gem sources --add https://gems.ruby-china.org/ --remove https://rubygems.org/
 RUN gem install rubygems-bundler
 RUN gem regenerate_binstubs
+RUN gem update bundler
+RUN gem install rake
 
 
 # Open Ports
